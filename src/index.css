@@ -8,6 +8,8 @@ html {
 * {
   text-decoration: none;
   box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
