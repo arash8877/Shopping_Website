@@ -1,0 +1,61 @@
+{
+    "products": [
+        {
+         "id": "1",
+         "title": "Samsung",
+         "image": "https://www.proshop.dk/Images/915x900/3090359_4976dad26ef8.jpg",
+         "price": 4200,
+         "availableBrand": ["samsung"],
+         "qty": 1
+        },
+        {
+         "id": "2",
+         "title": "iPhone",
+         "image": "https://www.proshop.dk/Images/915x900/2998492_024b405c6623.png",
+         "price": 6000,
+         "availableBrand": ["iphone"],
+         "qty": 1
+        },
+        {
+         "id": "3",
+         "title": "Motorola",
+         "image": "https://www.proshop.dk/Images/915x900/3098455_71b1c1971078.jpg",
+         "price": 1700,
+         "availableBrand": ["motorola"],
+         "qty": 1
+        },
+        {
+         "id": "4",
+         "title": "BlackBerry",
+         "image": "https://www.proshop.dk/Images/915x900/2507190_96b60d3baa40.jpg",
+         "price": 3000,
+         "availableBrand": ["blackberry"],
+         "qty": 1
+        },
+        {
+         "id": "5",
+         "title": "LG",
+         "image": "https://www.proshop.dk/Images/915x900/3070334_f754eb5125e1.jpg",
+         "price": 2100,
+         "availableBrand": ["lg"],
+         "qty": 1
+
+        },
+        {
+         "id": "6",
+         "title": "Sony",
+         "image": "https://www.proshop.dk/Images/915x900/3073289_ab5671be0e62.png",
+         "price": 1200,
+         "availableBrand": ["sony"],
+         "qty": 1
+        },
+        {
+            "id": "7",
+            "title": "Samsung",
+            "image": "https://www.proshop.dk/Images/915x900/2992572_1086caa4081b.jpg",
+            "price": 7000,
+            "availableBrand": ["samsung"],
+            "qty": 1
+           }
+    ]
+}
