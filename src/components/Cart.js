@@ -11,7 +11,7 @@ const Cart = ({ cartItems, removeFromBasket }) => {
       {cartItems.length === 0 ? (
         <div className="empty-price">Basket is empty</div>
       ) : (
-        <div className="show-price">
+        <div className="show-product-number">
           Yoy have {cartItems.length} items in the basket
         </div>
       )}

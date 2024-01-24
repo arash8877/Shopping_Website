@@ -70,7 +70,7 @@ const Home = () => {
           <a href="">Arash Web Shop</a>
         </header>
         <main>
-          <div className="content">
+          <div className="content second-container">
             <div className="main">
               <Filter
                 count={item.length}
