@@ -103,7 +103,7 @@ main {
 
 .second-container{
   margin-inline: auto;
-  width: min(90%, 150rem);
+  width: min(90%, 140rem);
 }
 
 .products {
