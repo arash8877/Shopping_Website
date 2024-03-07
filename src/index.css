@@ -71,17 +71,23 @@ main {
 
 .filter {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   font-size: 1.6rem;
+}
+
+.brand {
+  margin-top: 10px; 
+  text-align: center; 
 }
 
 .filter select {
   padding: 5px;
   border: 1px solid rgb(187, 187, 187);
   border-radius: 3px;
-  width: 200px;
-  margin-left: 10px;
+  width: 100%;
+  margin-top: 5px;
 }
 
 .filter .sort-title {
