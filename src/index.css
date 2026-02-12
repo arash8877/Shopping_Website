@@ -328,11 +328,12 @@ main {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   gap: 2.4rem;
   margin: 0;
   padding: 0;
   list-style: none;
+  justify-content: start;
 }
 
 .products li {
@@ -357,8 +358,9 @@ main {
 }
 
 .products li img {
-  height: 22rem;
-  object-fit: cover;
+  height: 20rem;
+  width: calc(100% - 3.2rem);
+  object-fit: contain;
   border-radius: 1.2rem;
   margin: 1.6rem;
   background: var(--surface-alt);
