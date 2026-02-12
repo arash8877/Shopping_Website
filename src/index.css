@@ -127,25 +127,6 @@ img {
   font-weight: 600;
 }
 
-.header-cta {
-  border: none;
-  border-radius: 999px;
-  padding: 1rem 2rem;
-  background: var(--text);
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.header-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(28, 31, 38, 0.18);
-}
-
 main {
   padding: 3rem 0 6rem;
   flex: 1;
@@ -181,10 +162,22 @@ main {
   margin-bottom: 1.2rem;
 }
 
-.hero-actions {
+.hero-highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1rem;
+}
+
+.hero-highlights span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border);
 }
 
 .primary-btn,
@@ -469,8 +462,36 @@ main {
   margin-left: 0.6rem;
 }
 
-.remove-item button {
-  width: 100%;
+.remove-item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remove-icon {
+  border: none;
+  background: #fff;
+  color: #d15548;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.remove-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.remove-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(209, 85, 72, 0.18);
 }
 
 .total-price {

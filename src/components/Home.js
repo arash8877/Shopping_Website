@@ -72,9 +72,6 @@ const Home = () => {
             </div>
             <div className="header-actions">
               <div className="header-pill">Free shipping over $150</div>
-              <button className="header-cta" type="button">
-                Explore deals
-              </button>
             </div>
           </div>
         </header>
@@ -87,13 +84,10 @@ const Home = () => {
                 Discover phones that balance design, speed, and battery life. Handpicked to make
                 your daily workflow smoother.
               </p>
-              <div className="hero-actions">
-                <button className="primary-btn" type="button">
-                  Shop newest
-                </button>
-                <button className="ghost-btn" type="button">
-                  See best sellers
-                </button>
+              <div className="hero-highlights">
+                <span>Top picks refreshed weekly</span>
+                <span>Verified device quality</span>
+                <span>Secure checkout</span>
               </div>
             </div>
             <div className="hero-card">
