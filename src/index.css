@@ -384,13 +384,46 @@ main {
 .cart-panel {
   background: var(--surface);
   border-radius: 1.8rem;
-  padding: 2rem;
+  padding: 2.4rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
-.empty-price,
-.show-product-number {
+.cart-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.cart-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+.cart-subtitle {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+
+.cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2rem;
+  height: 3.2rem;
+  padding: 0 0.8rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cart-empty {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -401,14 +434,9 @@ main {
   margin-bottom: 1.6rem;
 }
 
-.empty-price {
+.cart-empty {
   color: #b14b3d;
   background: #ffe9e3;
-}
-
-.show-product-number {
-  color: var(--success);
-  background: #e0f5ef;
 }
 
 .cart-item {
@@ -418,10 +446,12 @@ main {
 
 .product-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1.2rem;
-  padding-bottom: 1.4rem;
-  border-bottom: 1px solid var(--border);
+  padding: 1.4rem;
+  border-radius: 1.4rem;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  position: relative;
 }
 
 .product-detail {
@@ -442,24 +472,32 @@ main {
   margin: 0;
 }
 
-.product-price .price {
+.cart-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.8rem;
+  gap: 1.2rem;
 }
 
-.qty {
-  background: var(--text);
-  width: 3.4rem;
-  height: 3.4rem;
-  border-radius: 50%;
-  color: #fff;
-  display: flex;
+.cart-actions .price {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.cart-qty {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: var(--text);
+  color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
   font-size: 1.1rem;
-  margin-left: 0.6rem;
+  font-weight: 600;
 }
 
 .remove-item {
@@ -496,7 +534,7 @@ main {
 
 .total-price {
   background: var(--surface-alt);
-  padding: 1.8rem;
+  padding: 1.6rem 1.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

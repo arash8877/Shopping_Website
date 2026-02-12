@@ -9,24 +9,27 @@ const Cart = ({ cartItems, removeFromBasket }) => {
   return (
     <>
       <div className="cart-panel">
-        {cartItems.length === 0 ? (
-          <div className="empty-price">Your basket is empty</div>
-        ) : (
-          <div className="show-product-number">You have {cartItems.length} items in the basket</div>
-        )}
+        <div className="cart-header">
+          <div>
+            <h3 className="cart-title">Your basket</h3>
+            <p className="cart-subtitle">Review your picks before checkout.</p>
+          </div>
+          <span className="cart-count">{cartItems.length}</span>
+        </div>
+        {cartItems.length === 0 ? <div className="cart-empty">Your basket is empty.</div> : null}
         <div className="cart-item">
           {cartItems.map((element) => {
             return (
               <Fade direction="right">
                 <div key={element.id} className="product-item">
+                  <span className="cart-qty">{element.qty} pcs</span>
                   <div className="product-detail">
                     <img src={element.image} alt="" />
                     <h2>{element.title}</h2>
                   </div>
-                  <div className="product-price">
+                  <div className="cart-actions">
                     <div className="price">
                       <span>{formatCurrency(element.price)}</span>
-                      <span className="qty">{element.qty} pcs</span>
                     </div>
                     <div className="remove-item">
                       <button
