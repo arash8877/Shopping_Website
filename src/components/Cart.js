@@ -11,7 +11,23 @@ const Cart = ({ cartItems, removeFromBasket }) => {
       <div className="cart-panel">
         <div className="cart-header">
           <div>
-            <h3 className="cart-title">Your basket</h3>
+            <div className="cart-title" aria-label="Your basket">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 6h15l-2 9H8" />
+                <path d="M6 6l-1.5-3H2" />
+                <circle cx="9" cy="19" r="1.5" />
+                <circle cx="18" cy="19" r="1.5" />
+              </svg>
+            </div>
             <p className="cart-subtitle">Review your picks before checkout.</p>
           </div>
           <span className="cart-count">{cartItems.length}</span>

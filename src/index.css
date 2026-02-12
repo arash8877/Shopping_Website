@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg: #f4f7f6;
+  --bg: #f7f6f2;
   --surface: #ffffff;
-  --surface-alt: #f2f5f5;
-  --text: #15202b;
-  --muted: #5b6670;
-  --accent: #2d8c86;
-  --accent-strong: #1c6f6a;
-  --accent-soft: #d9f2ef;
-  --success: #1f8f6b;
-  --border: #e2e7e6;
+  --surface-alt: #f2f1ec;
+  --text: #1f1b16;
+  --muted: #6a6258;
+  --accent: #d36a4a;
+  --accent-strong: #b9573a;
+  --accent-soft: #f6ded4;
+  --success: #2f8b73;
+  --border: #e3ddd4;
   --shadow: 0 18px 40px rgba(28, 31, 38, 0.08);
 }
 
@@ -31,8 +31,8 @@ body {
   font-family: "Archivo", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top, #e7f3f1 0%, rgba(255, 255, 255, 0) 55%),
-    linear-gradient(120deg, #f4f7f6 0%, #eef4f2 55%, #f7f2ea 100%);
+    radial-gradient(circle at top, #f6ebe2 0%, rgba(255, 255, 255, 0) 55%),
+    linear-gradient(120deg, #f7f6f2 0%, #f2eee6 55%, #f8f1e9 100%);
 }
 
 body::before {
@@ -40,8 +40,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(45, 140, 134, 0.16), transparent 55%),
-    radial-gradient(circle at 85% 10%, rgba(241, 196, 125, 0.18), transparent 55%);
+    radial-gradient(circle at 15% 20%, rgba(211, 106, 74, 0.18), transparent 55%),
+    radial-gradient(circle at 85% 10%, rgba(122, 161, 126, 0.18), transparent 55%);
   pointer-events: none;
   z-index: 0;
 }
@@ -435,9 +435,20 @@ main {
 }
 
 .cart-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0 0 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 1.2rem;
+  background: var(--surface-alt);
+  color: var(--accent-strong);
+  margin: 0 0 0.6rem;
+}
+
+.cart-title svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .cart-subtitle {
