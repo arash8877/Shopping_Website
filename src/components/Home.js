@@ -71,7 +71,7 @@ const Home = () => {
               <span className="brand-tagline">Curated tech that feels effortless to own.</span>
             </div>
             <div className="header-actions">
-              <div className="header-pill">Free shipping over $150</div>
+              <div className="header-pill">Free shipping over DKK 450</div>
             </div>
           </div>
         </header>

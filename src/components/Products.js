@@ -9,13 +9,15 @@ const Products = ({ item, addToBasket }) => {
           return (
             <li key={item.id}>
               <div className="product">
-                <img src={item.image} alt="" />
+                <div className="product-media">
+                  <img src={item.image} alt="" />
+                </div>
                 <p className="product-title">{item.title}</p>
                 <div className="product-price">
+                  <div className="price">{formatCurrency(item.price)}</div>
                   <button className="btn-primary" onClick={() => addToBasket(item)}>
                     Add to basket
                   </button>
-                  <div className="price">{formatCurrency(item.price)}</div>
                 </div>
               </div>
             </li>
