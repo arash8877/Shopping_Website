@@ -29,11 +29,7 @@ const Home = () => {
       setItem(data.products);
     } else {
       setBrand(selected);
-      setItem(
-        data.products.filter(
-          (element) => element.availableBrand.indexOf(selected) >= 0
-        )
-      );
+      setItem(data.products.filter((element) => element.availableBrand.indexOf(selected) >= 0));
     }
   };
 
@@ -42,8 +38,8 @@ const Home = () => {
     if (exist) {
       setCartItems(
         cartItems.map((element) =>
-          element.id === product.id ? { ...exist, qty: exist.qty + 1 } : element
-        )
+          element.id === product.id ? { ...exist, qty: exist.qty + 1 } : element,
+        ),
       );
     } else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
@@ -57,8 +53,8 @@ const Home = () => {
     } else {
       setCartItems(
         cartItems.map((element) =>
-          element.id === product.id ? { ...exist, qty: exist.qty - 1 } : element
-        )
+          element.id === product.id ? { ...exist, qty: exist.qty - 1 } : element,
+        ),
       );
     }
   };
@@ -66,10 +62,58 @@ const Home = () => {
   return (
     <div>
       <div className="container">
-        <header>
-          <a href="">Arash Web Shop</a>
+        <header className="site-header">
+          <div className="header-inner second-container">
+            <div className="brand-block">
+              <a className="brand-link" href="/">
+                Arash Web Shop
+              </a>
+              <span className="brand-tagline">Curated tech that feels effortless to own.</span>
+            </div>
+            <div className="header-actions">
+              <div className="header-pill">Free shipping over $150</div>
+              <button className="header-cta" type="button">
+                Explore deals
+              </button>
+            </div>
+          </div>
         </header>
         <main>
+          <section className="hero second-container">
+            <div className="hero-content">
+              <p className="eyebrow">New season tech</p>
+              <h1>Modern devices for every kind of day.</h1>
+              <p className="hero-subtitle">
+                Discover phones that balance design, speed, and battery life. Handpicked to make
+                your daily workflow smoother.
+              </p>
+              <div className="hero-actions">
+                <button className="primary-btn" type="button">
+                  Shop newest
+                </button>
+                <button className="ghost-btn" type="button">
+                  See best sellers
+                </button>
+              </div>
+            </div>
+            <div className="hero-card">
+              <div className="hero-card-title">Todays highlights</div>
+              <ul className="hero-list">
+                <li>
+                  <span>Delivery</span>
+                  <span>2-4 days</span>
+                </li>
+                <li>
+                  <span>Support</span>
+                  <span>24/7 chat</span>
+                </li>
+                <li>
+                  <span>Warranty</span>
+                  <span>2 years</span>
+                </li>
+              </ul>
+            </div>
+          </section>
           <div className="content second-container">
             <div className="main">
               <Filter

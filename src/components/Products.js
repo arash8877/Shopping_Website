@@ -5,25 +5,22 @@ const Products = ({ item, addToBasket }) => {
   return (
     <div>
       <ul className="products">
-        {
-          item.map((item) => {
+        {item.map((item) => {
           return (
             <li key={item.id}>
               <div className="product">
-                <img
-                  src={item.image}
-                  alt=""
-                />
-                <p>{item.title}</p>
+                <img src={item.image} alt="" />
+                <p className="product-title">{item.title}</p>
                 <div className="product-price">
-                  <button onClick={()=>addToBasket(item)}>Add to the basket</button>
+                  <button className="btn-primary" onClick={() => addToBasket(item)}>
+                    Add to basket
+                  </button>
                   <div className="price">{formatCurrency(item.price)}</div>
                 </div>
               </div>
             </li>
           );
-        })
-        }
+        })}
       </ul>
     </div>
   );
@@ -32,4 +29,4 @@ const Products = ({ item, addToBasket }) => {
 export default Products;
 
 // if use only "addToBasket(item)", then will consider all of the item.
-// if use "()=>addToBasket(item)" then consider only the item has been clicked 
+// if use "()=>addToBasket(item)" then consider only the item has been clicked
