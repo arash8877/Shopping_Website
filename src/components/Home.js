@@ -78,8 +78,13 @@ const Home = () => {
         <main>
           <section className="hero second-container">
             <div className="hero-content">
-              <p className="eyebrow">New season tech</p>
-              <h1>Modern devices for every kind of day.</h1>
+              <div className="eyebrow">
+                <span className="eyebrow-label">New season tech</span>
+                <span className="eyebrow-line" aria-hidden="true" />
+              </div>
+              <h1 className="hero-title">
+                Modern devices for <span className="hero-accent">every day</span>.
+              </h1>
               <p className="hero-subtitle">
                 Discover phones that balance design, speed, and battery life. Handpicked to make
                 your daily workflow smoother.

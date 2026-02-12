@@ -140,26 +140,48 @@ main {
   margin: 2rem auto 4rem;
 }
 
-.hero-content h1 {
-  font-size: clamp(3rem, 3vw, 4.4rem);
-  line-height: 1.05;
-  margin-bottom: 1.2rem;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 3vw, 4.1rem);
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-accent {
+  color: var(--accent-strong);
 }
 
 .hero-subtitle {
   font-size: 1.6rem;
   color: var(--muted);
   max-width: 52rem;
-  margin-bottom: 2.4rem;
+  margin: 0 0 1.6rem;
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.eyebrow-label {
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: var(--accent-strong);
-  margin-bottom: 1.2rem;
+}
+
+.eyebrow-line {
+  width: 5.6rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-strong), rgba(255, 255, 255, 0));
 }
 
 .hero-highlights {
@@ -336,14 +358,6 @@ main {
   box-shadow: var(--shadow);
   overflow: hidden;
   position: relative;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.products li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 38px rgba(28, 31, 38, 0.12);
 }
 
 .products .product {
@@ -521,6 +535,21 @@ main {
   border-radius: 999px;
   font-size: 1.1rem;
   font-weight: 600;
+  animation: qty-pop 220ms ease-out;
+}
+
+@keyframes qty-pop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .remove-item {

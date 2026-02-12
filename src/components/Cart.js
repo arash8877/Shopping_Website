@@ -22,7 +22,9 @@ const Cart = ({ cartItems, removeFromBasket }) => {
             return (
               <Fade direction="right">
                 <div key={element.id} className="product-item">
-                  <span className="cart-qty">{element.qty} pcs</span>
+                  <span className="cart-qty" key={`qty-${element.id}-${element.qty}`}>
+                    {element.qty} pcs
+                  </span>
                   <div className="product-detail">
                     <img src={element.image} alt="" />
                     <h2>{element.title}</h2>
